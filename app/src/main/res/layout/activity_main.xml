@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Sol Joystick Koordinatları TextView -->
+    <TextView
+        android:id="@+id/left_joystick_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Left Joystick - X: 0, Y: 0"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Sağ Joystick Koordinatları TextView -->
+    <TextView
+        android:id="@+id/right_joystick_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_joystick_text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Right Joystick - X: 0, Y: 0"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Sol Alt Köşedeki Joystick -->
+
+    <!-- Sağ Alt Köşedeki Joystick -->
+
+    <!-- WebView Ortada Görünecek -->
+
+    <RelativeLayout
+        android:id="@+id/joystick_area_left"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/joystick_background">
+
+        <!-- Sol Alt Köşedeki Joystick Handle -->
+        <ImageView
+            android:id="@+id/joystick_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/joystick_handle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/joystick_area_right"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/joystick_background">
+
+        <!-- Sağ Alt Köşedeki Joystick Handle -->
+        <ImageView
+            android:id="@+id/joystick_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/joystick_handle" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="900dp"
+        android:layout_height="321dp"
+        android:layout_above="@id/joystick_area_left"
+        android:layout_below="@id/left_joystick_text"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="-110dp" />
+</RelativeLayout>
